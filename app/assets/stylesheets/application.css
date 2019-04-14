@@ -22,10 +22,16 @@ body {
 	margin: 0;
 }
 
-a, a:link {
+table a, table a:link {
 	color: #fff;
 	text-decoration: none;
 }
+
+a,  a:link {
+	color: #00adb5;
+	text-decoration: none;
+}
+
 
 input, select {
 	font-family: 'Quicksand', sans-serif;

@@ -1,11 +1,5 @@
 <%= render "shared/header" %>
 
-<%= flash[:notice] %>
-<h4>Import data</h4>
-<%= form_tag import_gears_path, multipart: true do %>
-<%= file_field_tag :file %>
-<%= submit_tag "Import from file" %>
-<% end %>
 
 <input type="text" id="input" placeholder="what are you looking for?">
 

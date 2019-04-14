@@ -8,6 +8,9 @@ class GearsController < ApplicationController
   def new
 	end
 
+  def import_csv
+	end
+
   def create
 	  @gear = Gear.new(gear_params)
 

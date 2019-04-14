@@ -1,7 +1,6 @@
 <%= render "shared/header" %>
 
 <h2>Add Gear</h2>
-<!-- <p><small>or <%= link_to 'Import from CSV', import_gears_path %></small></p> -->
 
 <%= form_with scope: :gear, url: gears_path, local: true do |form| %>
   <p>
@@ -28,5 +27,22 @@
   <p>
     <%= form.submit value: 'Save' %>
   </p>
+<% end %>
+
+<p></p>
+
+<h2>Import a CSV</h2>
+<p><strong><u>Required</u></strong>. CSV's 1st row should have the following header values. Your gear name and box name entries will start at the 2nd row.</p>
+<blockquote>
+<table>
+  <tr><td><strong>name</strong></td><td><strong>box_name</strong></td></tr>
+  <tr><td><strong>(your gear name)</strong></td><td><strong>(your box name)</strong></td></tr>
+</table>
+</blockquote>
+
+<%= flash[:notice] %>
+<%= form_tag import_gears_path, multipart: true, style: 'background-color: #32363d;' do %>
+<%= file_field_tag :file, style: 'margin: 25px' %>
+<%= submit_tag "Import" %>
 <% end %>
 

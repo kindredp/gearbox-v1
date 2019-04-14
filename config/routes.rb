@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   root to: 'gears#index'
   get '/gears/new' => 'gears#new'
   get '/gears/show' => 'gears#show'
-  get '/gears/import' => 'gears#import'
+  get '/gears/import-csv' => 'gears#import_csv'
 
 end
