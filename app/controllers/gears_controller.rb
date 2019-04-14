@@ -1,8 +1,7 @@
-require 'csv'
 
 class GearsController < ApplicationController
   def index
-    @csv_table = CSV.open("lib/seeds/gear.csv", :headers => true).read
+    # @csv_table = CSV.open("lib/seeds/gear.csv", :headers => true).read
     @gear = Gear.all
   end
 
@@ -18,6 +17,11 @@ class GearsController < ApplicationController
 
   def show
     @gear = Gear.find(params[:id])
+  end
+
+  def import
+   	Gear.import(params[:file])
+   	redirect_to root_url, notice: "Successfully Imported Data!!!"
   end
 
   private

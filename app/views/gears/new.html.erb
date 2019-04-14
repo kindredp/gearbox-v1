@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 
 <h2>Add Gear</h2>
+<!-- <p><small>or <%= link_to 'Import from CSV', import_gears_path %></small></p> -->
 
 <%= form_with scope: :gear, url: gears_path, local: true do |form| %>
   <p>
@@ -28,3 +29,4 @@
     <%= form.submit value: 'Save' %>
   </p>
 <% end %>
+

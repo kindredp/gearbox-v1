@@ -1,4 +1,4 @@
-,
+name,box_name
 1st aid kit,run/camp
 1st aid kit forceps,run/camp
 1st aid kit running,run/camp
@@ -11,7 +11,7 @@ apple earphones case,k
 bag,climb/camp
 bag bungee,electronics
 batteries,electronics
-black diamond beer koozey,run/camp
+black diamond beer koozie,run/camp
 black diamond headlamp,run/camp
 black diamond lamp,run/camp
 black strap,climb/camp
