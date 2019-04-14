@@ -1,0 +1,37 @@
+<%= render "shared/header" %>
+
+<input type="text" id="input" placeholder="what are you looking for?">
+
+<table id="table" class="table table-bordered table-striped">
+		<thead><th>gear</th><th>box</th></thead>
+		<tbody>			
+			<tr>
+				<% @csv_table.headers.each do |header| %>
+				<th><%= header %></th>
+				<% end %> 
+			</tr>
+			<% @csv_table.each do |row| %>
+				<tr>
+					<% row.each do |element| %>
+						<td><%= element[1] %></td>
+					<% end %>
+				</tr>
+			<% end %>
+
+			<%= @gear.each do |gear| %>
+				<tr>
+					<td><%= link_to gear.name, gear_path(gear) %>						
+						</td>
+					<td><%= gear.box_name %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</tr>
+</table>
+
+
+<script>
+$('#input').keyup(function () {
+	table_search($('#input').val(),$('#table tbody tr'),'012');
+});
+</script>

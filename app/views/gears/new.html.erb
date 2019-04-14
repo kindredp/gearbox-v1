@@ -1,0 +1,30 @@
+<%= render "shared/header" %>
+
+<h2>Add Gear</h2>
+
+<%= form_with scope: :gear, url: gears_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p> 
+    <%= form.label :box_name %><br>
+    <%= form.select :box_name, [
+      ["run/camp", 1], 
+      ["run/climb", 2],
+      ["electronics", 3],
+      ["home", 5],
+      ["cameras", 6],
+      ["j", 7],
+      ["k", 8],
+      ["xmas", 9],
+      ["bookshelf", 10],
+      ["other", 11]
+    ] %>
+  </p>
+ 
+  <p>
+    <%= form.submit value: 'Save' %>
+  </p>
+<% end %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  # get 'gear/index', to: 'index'
-  root to: 'gear#index'
+  resources :gears
+  root to: 'gears#index'
+  get '/gears/new' => 'gears#new'
+  get '/gears/show' => 'gears#show'
 end
