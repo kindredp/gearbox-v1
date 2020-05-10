@@ -7,3 +7,7 @@
 <p>
   <%= @gear.box_name %>
 </p>
+
+<% if @gear.photo.attached? %>
+  <img src="<%= (url_for(@gear.photo)) %>" style="max-width: 70%; margin: 0; padding: 0;">
+<% end %>

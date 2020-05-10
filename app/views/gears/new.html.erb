@@ -11,21 +11,24 @@
   <p> 
     <%= form.label :box_name %><br>
     <%= form.select :box_name, [
-      ["run/camp", 1], 
-      ["run/climb", 2],
-      ["electronics", 3],
-      ["home", 5],
-      ["cameras", 6],
-      ["j", 7],
-      ["k", 8],
-      ["xmas", 9],
-      ["bookshelf", 10],
-      ["other", 11],
-      ["top of cabinets", 12],
-      ["kindred's cabinet", 13]
+      ["run/camp"], 
+      ["run/climb"],
+      ["electronics"],
+      ["home"],
+      ["cameras"],
+      ["j"],
+      ["k"],
+      ["xmas"],
+      ["bookshelf"],
+      ["other"],
+      ["top of cabinets"],
+      ["kindred's cabinet"]
     ] %>
   </p>
- 
+  <p>
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
+  </p>
   <p>
     <%= form.submit value: 'Save' %>
   </p>
