@@ -1,13 +1,11 @@
 <%= render "shared/header" %>
 
-<p>
-  <%= @gear.name %>
-</p>
- 
-<p>
-  <%= @gear.box_name %>
-</p>
+<h2>
+  <strong><%= @gear.name %></strong> <span class="lighter">is in</span> <strong><%= @gear.box_name %></strong>
+</h2>
 
 <% if @gear.photo.attached? %>
   <img src="<%= (url_for(@gear.photo)) %>" style="max-width: 70%; margin: 0; padding: 0;">
 <% end %>
+
+<p><%= link_to 'Edit', edit_gear_path(@gear) %></p>

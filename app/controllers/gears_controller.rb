@@ -18,8 +18,17 @@ class GearsController < ApplicationController
 	  redirect_to @gear
   end
 
+  def edit
+    @gear = Gear.find(params[:id])
+  end
+
   def show
     @gear = Gear.find(params[:id])
+  end
+
+  def destroy
+    Gear.find_by(id: params[:id]).destroy
+    redirect_to :index
   end
 
   def import
