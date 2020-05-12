@@ -27,8 +27,10 @@ class GearsController < ApplicationController
   end
 
   def destroy
-    Gear.find_by(id: params[:id]).destroy
-    redirect_to :index
+    @gear = Gear.find(params[:id])
+    @gear.destroy
+    flash[:notice] = 'Deleted'
+    redirect_to root_path
   end
 
   def import

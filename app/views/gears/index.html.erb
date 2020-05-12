@@ -2,6 +2,10 @@
 
 <input type="text" id="input" placeholder="what are you looking for?">
 
+<p class="notice">
+	<%= notice %>
+</p>
+
 <table id="table" class="table table-bordered table-striped">
 		<thead><th>gear</th><th>box</th></thead>
 		<tbody>			
@@ -15,10 +19,3 @@
 		</tbody>
 	</tr>
 </table>
-
-
-<script>
-$('#input').keyup(function () {
-	table_search($('#input').val(),$('#table tbody tr'),'012');
-});
-</script>

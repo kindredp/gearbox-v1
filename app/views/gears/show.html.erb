@@ -9,3 +9,5 @@
 <% end %>
 
 <p><%= link_to 'Edit', edit_gear_path(@gear) %></p>
+
+<p><%= link_to 'Delete', @gear, :confirm => "Are you sure?", :method => :delete %></p>
