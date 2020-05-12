@@ -2,11 +2,7 @@
 
 <input type="text" id="search" placeholder="what are you looking for?">
 
-<% if !flash.empty? %>
-	<p class="notice">
-		<%= notice %>
-	</p>
-<% end %>
+<%= render "shared/flash" %>
 
 <table>
 		<thead><th>gear</th><th>box</th></thead>
