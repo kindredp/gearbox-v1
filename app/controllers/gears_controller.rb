@@ -22,6 +22,18 @@ class GearsController < ApplicationController
     @gear = Gear.find(params[:id])
   end
 
+  def update
+    # @gear.update gear_params
+    @gear = Gear.find(params[:id])
+
+    if @gear.update_attributes gear_params
+      flash[:notice] = 'Saved!'
+      redirect_to @gear
+    else
+        # handle failure
+    end
+  end
+
   def show
     @gear = Gear.find(params[:id])
   end
@@ -29,7 +41,7 @@ class GearsController < ApplicationController
   def destroy
     @gear = Gear.find(params[:id])
     @gear.destroy
-    flash[:notice] = 'Deleted'
+    flash[:notice] = 'Deleted!'
     redirect_to root_path
   end
 

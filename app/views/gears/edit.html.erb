@@ -2,15 +2,16 @@
 
 <h2><%= @gear.name %></h2>
 
-<%= form_with scope: :gear, url: gears_path, local: true do |form| %>
+
+	<%= form_for @gear do |f| %>
     <p>
-      <%= form.label :name %><br>
-      <%= form.text_field :name %>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
     </p>
    
     <p> 
-      <%= form.label :box_name %><br>
-      <%= form.select :box_name, [
+      <%= f.label :box_name %><br>
+      <%= f.select :box_name, [
         ["run/camp"], 
         ["run/climb"],
         ["electronics"],
@@ -26,8 +27,8 @@
       ] %>
 		</p>
     <p>
-      <%= form.label :photo %>
-      <%= form.file_field :photo %>
+      <%= f.label :photo %>
+      <%= f.file_field :photo %>
     </p>
 		<p>
 			<% if @gear.photo.attached? %>
@@ -35,7 +36,7 @@
 			<% end %>
 		</p>
     <p>
-      <%= form.submit value: 'Save' %>
+      <%= f.submit value: 'Save' %>
     </p>
   <% end %>
   

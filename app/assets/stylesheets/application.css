@@ -114,13 +114,9 @@ table td:nth-of-type(2), table th:nth-of-type(2) {
 	color: #999;
 }
 
-.notice {
+.flash {
 	color: #155724;
 	background-color: #d4edda;
 	border-color: #c3e6cb;
 	padding: 1rem 0;
-}
-
-.notice:empty {
-	display: none
 }
